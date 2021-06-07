@@ -14,8 +14,8 @@ const config = {
     name: "SocialContacts",
     exports: "named"
   },
+  external: ['sass', 'node-sass'],
   plugins: [
-    external,
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),

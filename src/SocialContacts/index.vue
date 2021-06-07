@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import facebook from './icons/Facebook'
-import instagram from './icons/Instagram'
-import pinterest from './icons/Pinterest'
-import linkedin from './icons/Linkedin'
-import twitter from './icons/twitter'
-import youtube from './icons/youtube'
+import facebook from './icons/Facebook.vue'
+import instagram from './icons/Instagram.vue'
+import pinterest from './icons/Pinterest.vue'
+import linkedin from './icons/Linkedin.vue'
+import twitter from './icons/Twitter.vue'
+import youtube from './icons/Youtube.vue'
 
 export default {
   components: {
