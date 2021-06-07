@@ -1,6 +1,6 @@
 {
   "name": "@palazzinacreativa/social-contacts",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Social Icons",
   "author": "PalazzinaCreativa",
   "main": "dist/socialcontacts.umd.js",
