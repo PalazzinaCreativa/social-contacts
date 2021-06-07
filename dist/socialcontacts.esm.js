@@ -342,17 +342,17 @@ var browser = createInjector;
 var __vue_script__ = script;
 
 /* template */
-var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"social"},_vm._l((Object.keys(_vm.contacts)),function(contact){return _c('a',{key:contact,staticClass:"social__icon",attrs:{"href":_vm.contacts[contact],"target":"_blank"}},[_c(contact,{tag:"component"})],1)}),0)};
+var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"social-links"},_vm._l((Object.keys(_vm.contacts)),function(contact){return _c('a',{key:contact,staticClass:"social",attrs:{"href":_vm.contacts[contact],"target":"_blank"}},[_c('div',{staticClass:"social__bg"}),_vm._v(" "),_c('div',{staticClass:"social__icon"},[_c(contact,{tag:"component"})],1)])}),0)};
 var __vue_staticRenderFns__$6 = [];
 
   /* style */
   var __vue_inject_styles__$6 = function (inject) {
     if (!inject) { return }
-    inject("data-v-57747e6d_0", { source: ".social[data-v-57747e6d]{display:flex}.social__icon[data-v-57747e6d]{width:3rem;height:3rem;padding:.875rem;background-color:#fff}.social[data-v-57747e6d]  svg{width:auto;height:100%}", map: undefined, media: undefined });
+    inject("data-v-efdad952_0", { source: ".social-links[data-v-efdad952]{display:flex;align-items:center}.social-links .social[data-v-efdad952]{width:3rem;height:3rem;padding:.875rem;display:flex;justify-content:center;align-items:center;position:relative}.social-links .social__bg[data-v-efdad952]{background-color:#fff;width:100%;height:100%;position:absolute;top:0;left:0;transition:transform .6s ease-out}.social-links .social__icon[data-v-efdad952]{position:relative;z-index:4;display:block;width:100%;height:100%}.social-links .social__icon[data-v-efdad952]  svg{width:auto;height:100%}.social-links .social:hover .social__bg[data-v-efdad952]{transform:scale(1.1)}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__$6 = "data-v-57747e6d";
+  var __vue_scope_id__$6 = "data-v-efdad952";
   /* module identifier */
   var __vue_module_identifier__$6 = undefined;
   /* functional template */

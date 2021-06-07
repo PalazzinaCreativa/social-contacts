@@ -1,9 +1,12 @@
 <template>
   <div
-    class="social"
+    class="social-links"
   >
-    <a class="social__icon" :href="contacts[contact]" target="_blank" v-for="contact of Object.keys(contacts)" :key="contact">
-      <component :is="contact" />
+    <a class="social" :href="contacts[contact]" target="_blank" v-for="contact of Object.keys(contacts)" :key="contact">
+      <div class="social__bg"></div>
+      <div class="social__icon">
+        <component :is="contact" />
+      </div>
     </a>
   </div>
 </template>
@@ -35,17 +38,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.social {
+.social-links {
   display: flex;
-  &__icon {
+  align-items: center;
+  .social {
     width: 3rem;
     height: 3rem;
     padding: 0.875rem;
-    background-color: #fff;
-  }
-  ::v-deep svg {
-    width: auto;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__bg {
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.6s ease-out;
+    }
+    &__icon {
+      position: relative;
+      z-index: 4;
+      display: block;
+      width: 100%;
+      height: 100%;
+      ::v-deep svg {
+        width: auto;
+        height: 100%;
+      }
+    }
+    &:hover {
+      .social__bg {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 </style>
