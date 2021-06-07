@@ -5,29 +5,38 @@
   >
     <a class="social" :href="contacts[contact]" target="_blank" v-for="contact of Object.keys(contacts)" :key="contact">
       <div class="social__bg"></div>
-      <div class="social__icon">
-        <component :is="contact" />
+      <div class="social__icon" v-if="getComponent(contact)">
+        <component :is="getComponent(contact)" />
       </div>
     </a>
   </div>
 </template>
 
 <script>
-import facebook from './icons/Facebook.vue'
-import instagram from './icons/Instagram.vue'
-import pinterest from './icons/Pinterest.vue'
-import linkedin from './icons/Linkedin.vue'
-import twitter from './icons/Twitter.vue'
-import youtube from './icons/Youtube.vue'
+import Facebook from './icons/Facebook.vue'
+import Instagram from './icons/Instagram.vue'
+import Pinterest from './icons/Pinterest.vue'
+import Linkedin from './icons/Linkedin.vue'
+import Twitter from './icons/Twitter.vue'
+import Youtube from './icons/Youtube.vue'
+
+const components = {
+  facebook: Facebook,
+  instagram: Instagram,
+  twitter: Twitter,
+  pinterest: Pinterest,
+  linkedin: Linkedin,
+  youtube: Youtube
+}
 
 export default {
   components: {
-    facebook,
-    instagram,
-    pinterest,
-    linkedin,
-    twitter,
-    youtube
+    Facebook,
+    Instagram,
+    Pinterest,
+    Linkedin,
+    Twitter,
+    Youtube
   },
   props: {
     contacts: {
@@ -42,6 +51,11 @@ export default {
       type: String,
       default: () => '#000000'
     }
+  },
+  methods: {
+    getComponent (contact) {
+      return components(contact)
+    }
   }
 }
 </script>
@@ -55,7 +69,7 @@ export default {
   .social {
     width: 3rem;
     height: 3rem;
-    padding: 0.875rem;
+    padding: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;

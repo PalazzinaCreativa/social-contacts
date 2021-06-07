@@ -109,7 +109,7 @@
     
 
     
-    var facebook = normalizeComponent_1(
+    var Facebook = normalizeComponent_1(
       { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
       __vue_inject_styles__,
       {},
@@ -140,7 +140,7 @@
     
 
     
-    var instagram = normalizeComponent_1(
+    var Instagram = normalizeComponent_1(
       { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
       __vue_inject_styles__$1,
       {},
@@ -171,7 +171,7 @@
     
 
     
-    var pinterest = normalizeComponent_1(
+    var Pinterest = normalizeComponent_1(
       { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
       __vue_inject_styles__$2,
       {},
@@ -202,7 +202,7 @@
     
 
     
-    var linkedin = normalizeComponent_1(
+    var Linkedin = normalizeComponent_1(
       { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
       __vue_inject_styles__$3,
       {},
@@ -233,7 +233,7 @@
     
 
     
-    var twitter = normalizeComponent_1(
+    var Twitter = normalizeComponent_1(
       { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
       __vue_inject_styles__$4,
       {},
@@ -264,7 +264,7 @@
     
 
     
-    var youtube = normalizeComponent_1(
+    var Youtube = normalizeComponent_1(
       { render: __vue_render__$5, staticRenderFns: __vue_staticRenderFns__$5 },
       __vue_inject_styles__$5,
       {},
@@ -277,14 +277,23 @@
 
   //
 
+  var components = {
+    facebook: Facebook,
+    instagram: Instagram,
+    twitter: Twitter,
+    pinterest: Pinterest,
+    linkedin: Linkedin,
+    youtube: Youtube
+  };
+
   var script = {
     components: {
-      facebook: facebook,
-      instagram: instagram,
-      pinterest: pinterest,
-      linkedin: linkedin,
-      twitter: twitter,
-      youtube: youtube
+      Facebook: Facebook,
+      Instagram: Instagram,
+      Pinterest: Pinterest,
+      Linkedin: Linkedin,
+      Twitter: Twitter,
+      Youtube: Youtube
     },
     props: {
       contacts: {
@@ -298,6 +307,11 @@
       iconColor: {
         type: String,
         default: function () { return '#000000'; }
+      }
+    },
+    methods: {
+      getComponent: function getComponent (contact) {
+        return components(contact)
       }
     }
   };
@@ -356,17 +370,17 @@
   var __vue_script__ = script;
 
   /* template */
-  var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"social-links",style:({ '--bg-color': _vm.bgColor, '--icon-color': _vm.iconColor })},_vm._l((Object.keys(_vm.contacts)),function(contact){return _c('a',{key:contact,staticClass:"social",attrs:{"href":_vm.contacts[contact],"target":"_blank"}},[_c('div',{staticClass:"social__bg"}),_vm._v(" "),_c('div',{staticClass:"social__icon"},[_c(contact,{tag:"component"})],1)])}),0)};
+  var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"social-links",style:({ '--bg-color': _vm.bgColor, '--icon-color': _vm.iconColor })},_vm._l((Object.keys(_vm.contacts)),function(contact){return _c('a',{key:contact,staticClass:"social",attrs:{"href":_vm.contacts[contact],"target":"_blank"}},[_c('div',{staticClass:"social__bg"}),_vm._v(" "),(_vm.getComponent(contact))?_c('div',{staticClass:"social__icon"},[_c(_vm.getComponent(contact),{tag:"component"})],1):_vm._e()])}),0)};
   var __vue_staticRenderFns__$6 = [];
 
     /* style */
     var __vue_inject_styles__$6 = function (inject) {
       if (!inject) { return }
-      inject("data-v-3a8a1faf_0", { source: ".social-links[data-v-3a8a1faf]{display:flex;align-items:center;position:relative;width:100%}.social-links .social[data-v-3a8a1faf]{width:3rem;height:3rem;padding:.875rem;display:flex;justify-content:center;align-items:center;position:relative;margin:0 .75rem}.social-links .social[data-v-3a8a1faf]:first-child{margin-left:0}.social-links .social[data-v-3a8a1faf]:last-child{margin-right:0}.social-links .social__bg[data-v-3a8a1faf]{background-color:var(--bg-color);width:100%;height:100%;position:absolute;top:0;border-radius:50%;left:0;transition:transform .6s ease-out}.social-links .social__icon[data-v-3a8a1faf]{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;width:100%;height:100%;color:var(--icon-color)}.social-links .social__icon[data-v-3a8a1faf]  svg{width:auto;height:100%}.social-links .social:hover .social__bg[data-v-3a8a1faf]{transform:scale(1.1)}", map: undefined, media: undefined });
+      inject("data-v-439f9590_0", { source: ".social-links[data-v-439f9590]{display:flex;align-items:center;position:relative;width:100%}.social-links .social[data-v-439f9590]{width:3rem;height:3rem;padding:1.2rem;display:flex;justify-content:center;align-items:center;position:relative;margin:0 .75rem}.social-links .social[data-v-439f9590]:first-child{margin-left:0}.social-links .social[data-v-439f9590]:last-child{margin-right:0}.social-links .social__bg[data-v-439f9590]{background-color:var(--bg-color);width:100%;height:100%;position:absolute;top:0;border-radius:50%;left:0;transition:transform .6s ease-out}.social-links .social__icon[data-v-439f9590]{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;width:100%;height:100%;color:var(--icon-color)}.social-links .social__icon[data-v-439f9590]  svg{width:auto;height:100%}.social-links .social:hover .social__bg[data-v-439f9590]{transform:scale(1.1)}", map: undefined, media: undefined });
 
     };
     /* scoped */
-    var __vue_scope_id__$6 = "data-v-3a8a1faf";
+    var __vue_scope_id__$6 = "data-v-439f9590";
     /* module identifier */
     var __vue_module_identifier__$6 = undefined;
     /* functional template */
