@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     getComponent (contact) {
-      return components(contact)
+      return components[contact] || null
     }
   }
 }

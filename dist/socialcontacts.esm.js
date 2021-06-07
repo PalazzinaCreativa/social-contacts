@@ -305,7 +305,7 @@ var script = {
   },
   methods: {
     getComponent: function getComponent (contact) {
-      return components(contact)
+      return components[contact] || null
     }
   }
 };
@@ -370,11 +370,11 @@ var __vue_staticRenderFns__$6 = [];
   /* style */
   var __vue_inject_styles__$6 = function (inject) {
     if (!inject) { return }
-    inject("data-v-439f9590_0", { source: ".social-links[data-v-439f9590]{display:flex;align-items:center;position:relative;width:100%}.social-links .social[data-v-439f9590]{width:3rem;height:3rem;padding:1.2rem;display:flex;justify-content:center;align-items:center;position:relative;margin:0 .75rem}.social-links .social[data-v-439f9590]:first-child{margin-left:0}.social-links .social[data-v-439f9590]:last-child{margin-right:0}.social-links .social__bg[data-v-439f9590]{background-color:var(--bg-color);width:100%;height:100%;position:absolute;top:0;border-radius:50%;left:0;transition:transform .6s ease-out}.social-links .social__icon[data-v-439f9590]{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;width:100%;height:100%;color:var(--icon-color)}.social-links .social__icon[data-v-439f9590]  svg{width:auto;height:100%}.social-links .social:hover .social__bg[data-v-439f9590]{transform:scale(1.1)}", map: undefined, media: undefined });
+    inject("data-v-4541d826_0", { source: ".social-links[data-v-4541d826]{display:flex;align-items:center;position:relative;width:100%}.social-links .social[data-v-4541d826]{width:3rem;height:3rem;padding:1.2rem;display:flex;justify-content:center;align-items:center;position:relative;margin:0 .75rem}.social-links .social[data-v-4541d826]:first-child{margin-left:0}.social-links .social[data-v-4541d826]:last-child{margin-right:0}.social-links .social__bg[data-v-4541d826]{background-color:var(--bg-color);width:100%;height:100%;position:absolute;top:0;border-radius:50%;left:0;transition:transform .6s ease-out}.social-links .social__icon[data-v-4541d826]{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;width:100%;height:100%;color:var(--icon-color)}.social-links .social__icon[data-v-4541d826]  svg{width:auto;height:100%}.social-links .social:hover .social__bg[data-v-4541d826]{transform:scale(1.1)}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__$6 = "data-v-439f9590";
+  var __vue_scope_id__$6 = "data-v-4541d826";
   /* module identifier */
   var __vue_module_identifier__$6 = undefined;
   /* functional template */
