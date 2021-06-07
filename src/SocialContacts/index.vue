@@ -1,6 +1,7 @@
 <template>
   <div
     class="social-links"
+    :style="{ '--bg-color': bgColor, '--icon-color': iconColor }"
   >
     <a class="social" :href="contacts[contact]" target="_blank" v-for="contact of Object.keys(contacts)" :key="contact">
       <div class="social__bg"></div>
@@ -32,6 +33,14 @@ export default {
     contacts: {
       type: Object,
       required: true
+    },
+    bgColor: {
+      type: String,
+      default: () => '#ffffff'
+    },
+    iconColor: {
+      type: String,
+      default: () => '#000000'
     }
   }
 }
@@ -41,6 +50,8 @@ export default {
 .social-links {
   display: flex;
   align-items: center;
+  position: relative;
+  width: 100%;
   .social {
     width: 3rem;
     height: 3rem;
@@ -49,21 +60,32 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 0 0.75rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
     &__bg {
-      background-color: #fff;
+      background-color: var(--bg-color);
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
+      border-radius: 50%;
       left: 0;
       transition: transform 0.6s ease-out;
     }
     &__icon {
       position: relative;
       z-index: 4;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
+      color: var(--icon-color);
       ::v-deep svg {
         width: auto;
         height: 100%;
