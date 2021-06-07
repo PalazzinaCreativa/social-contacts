@@ -1,4 +1,4 @@
-# vue-pictureset
+# social-contacts
 Vue component to display social icons.
 ## Installation
 ```
