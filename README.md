@@ -1,24 +1,45 @@
-# social-contacts
-
-## Project setup
+# vue-pictureset
+Vue component to display social icons.
+## Installation
 ```
-npm install
+npm i @palazzinacreativa/social-contacts
 ```
-
-### Compiles and hot-reloads for development
+or
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+yarn add npm i @palazzinacreativa/social-contacts
 ```
 
-### Lints and fixes files
+Then you can install your plugin globally with
 ```
-npm run lint
+...
+import SocialContacts from '@palazzinacreativa/social-contacts'
+
+Vue.use(SocialContacts)
+...
+```
+or locally
+```
+...
+import SocialContacts from '@palazzinacreativa/social-contacts'
+
+export default {
+  ...
+  components: {
+    SocialContacts
+  },
+  ...
+}
+...
+```
+## Usage
+You can simply use it as a component.
+```
+<SocialContacts :contacts="contacts" />
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Options
+| Parameter    | Required | Type            | Default                                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|--------------|----------|-----------------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| contacts          | true     | Object          |                                                | Object for your social links. Key is the social (kebab case), value is the url. Eg: { facebook: 'https://facebook.com/your-fb-url', instagram: 'https://instagram.com/your-ig-url' }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| bg-color          |          | String          |           #ffffff                                     | Backgound color for social icon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| icon-color        |          | String          |             #000000                                   | Color of the icon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
