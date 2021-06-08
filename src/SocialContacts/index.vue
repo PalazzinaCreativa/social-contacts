@@ -67,13 +67,14 @@ export default {
   position: relative;
   width: 100%;
   .social {
-    width: 3rem;
-    height: 3rem;
-    padding: 1.2rem;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.875rem;
     margin: 0 0.75rem;
     &:first-child {
       margin-left: 0;
