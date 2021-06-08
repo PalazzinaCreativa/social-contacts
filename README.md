@@ -43,3 +43,16 @@ You can simply use it as a component.
 | contacts          | true     | Object          |                                                | Object for your social links. Key is the social (kebab case), value is the url. Eg: { facebook: 'https://facebook.com/your-fb-url', instagram: 'https://instagram.com/your-ig-url' }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | bg-color          |          | String          |           #ffffff                                     | Backgound color for social icon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | icon-color        |          | String          |             #000000                                   | Color of the icon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+
+
+## Supported icons
+facebook
+instagram
+linkedin
+pinterest
+twitter
+whatsapp
+youtube
+
+### To do
+Social share
